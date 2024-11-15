@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/surface_variant" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/networkStatusCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/surface_variant"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchInputLayout"
+            tools:ignore="NotSibling">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp">
+
+                <ProgressBar
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:indeterminateTint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/networkStatusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading_books"
+                    android:textColor="@color/on_surface"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/booksRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/networkStatusCard"
+            tools:listitem="@layout/book_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

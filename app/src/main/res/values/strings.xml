@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My BookShelf</string>
+    <string name="search_books">Search books</string>
+    <string name="bookshelf_header">My Bookshelf</string>
+    <string name="initial_search_term">dogs</string>
+    <string name="loading_books">Loading books…</string>
+    <string name="network_error">Network error. Please try again.</string>
+    <string name="no_results">No books found. Try a different search.</string>
+</resources>

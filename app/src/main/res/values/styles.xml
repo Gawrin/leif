@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.PillTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">24dp</item>
+        <item name="boxCornerRadiusTopEnd">24dp</item>
+        <item name="boxCornerRadiusBottomStart">24dp</item>
+        <item name="boxCornerRadiusBottomEnd">24dp</item>
+    </style>
+    <style name="RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30dp</item>
+    </style>
+</resources>

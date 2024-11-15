@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="grid_spacing">8dp</dimen>
+    <dimen name="book_card_height">250dp</dimen>
+    <dimen name="chip_min_height">32dp</dimen>
+</resources>
